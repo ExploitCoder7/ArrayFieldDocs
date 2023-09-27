@@ -56,3 +56,39 @@ Window:Prompt({
     }
 })
 ```
+# Creating Tabs
+```lua
+local Tab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
+```
+# Creating Sections
+```lua
+local Section = Tab:CreateSection("Section Example",false) -- The 2nd argument is to tell if its only a Title and doesnt contain element
+```
+# Elements
+# Notifying The User
+```lua
+ArrayField:Notify({
+   Title = "Notification Title",
+   Content = "Notification Content",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+ },
+})
+```
+# Creating Buttons
+```lua
+local Button = Tab:CreateButton({
+   Name = "Button Example",
+   Interact = 'Click',
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+```
