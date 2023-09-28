@@ -1,5 +1,5 @@
 # ArrayField Documentation
-Unofficial Btw
+Unofficial Btw Heres Official Doc But No Mobile Support: rayfield.dev/community/arrayfield
 # Getting Started
 ```lua
 local ArrayField = loadstring(game:HttpGet('https://raw.githubusercontent.com/ExploitCoder7/ArrayField/main/Source.lua%20(2).txt'))()
