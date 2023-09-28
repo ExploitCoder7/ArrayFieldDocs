@@ -92,3 +92,83 @@ local Button = Tab:CreateButton({
    end,
 })
 ```
+# Creating Toggles
+```lua
+local Toggle = Tab:CreateToggle({
+   Name = "Toggle Example",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+```
+# Creating Sliders
+```lua
+local Slider = Tab:CreateSlider({
+   Name = "Slider Example",
+   Range = {0, 100},
+   Increment = 10,
+   Suffix = "Bananas",
+   CurrentValue = 10,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the slider changes
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
+```
+# Creating Textboxes
+```lua
+local Input = Tab:CreateInput({
+   Name = "Input Example",
+   PlaceholderText = "Input Placeholder",
+   NumbersOnly = true, -- If the user can only type numbers. Remove or set to false if none.
+   CharacterLimit = 15, --max character limit. Remove or set to false
+   OnEnter = true, -- Will callback only if the user pressed ENTER while being focused on the the box.
+   RemoveTextAfterFocusLost = false, -- Speaks for itself.
+   Callback = function(Text)
+   -- The function that takes place when the input is changed
+   -- The variable (Text) is a string for the value in the text box
+   end,
+})
+```
+# Creating Dropdowns
+```lua
+local Dropdown = Tab:CreateDropdown({
+   Name = "Dropdown Example",
+   Options = {"Option 1","Option 2"},
+   CurrentOption = "Option 1" or {"Option 1","Option 3"},
+   MultiSelection = true, -- If MultiSelections is allowed
+   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Option)
+   -- The function that takes place when the selected option is changed
+   -- The variable (Option) is a string for the value that the dropdown was changed to
+   end,
+})
+```
+# Textual Elements
+# Creating Paragraphs
+```lua
+local Paragraph = Tab:CreateParagraph({Title = "Paragraph Example", Content = "Paragraph Example"})
+```
+Put \n To Make Second Line
+# Creating Labels
+```lua
+local Label = Tab:CreateLabel("Label Example")
+```
+# Extra
+# General Settings
+```lua
+local ElementExample
+ElementExample = Tab:Create______({
+
+Info = {
+   Image = '1234567890',
+   Text = 'Description for the prompt'
+},
+SectionParent = Section -- Section It`s Put In
+
+})
+```
